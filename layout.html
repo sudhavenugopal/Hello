@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title> Layout page</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+     body{
+         margin:0;
+     }
+     .container
+     {
+         width:100vw;
+         height:100vh;
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+         font-size: 20px;
+         font-weight: bold;
+         display:grid;
+         grid-template-columns:repeat(3,1fr);
+         grid-template-rows: 50px 1fr 1fr 100px;
+         gap:10px;
+         box-sizing: border-box;
+   }
+   .container div{
+       padding: 10px;
+       border: 1px solid black;
+   }
+   .header
+   {
+       grid-column-start: 1;
+       grid-column-end: 4;
+   }
+   .content-lg
+   {
+       grid-row-start: 2;
+       grid-row-end:span 2;
+       grid-column-start: 1;
+       grid-column-end: 3;
+   }
+   .footer
+   {
+    grid-column: 1/span 3;
+   }
+ </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        VSSA Creative web designer
+        <p>djjdfk</p>
+        
+        </div>
+    <div class="content-lg"> content 1</div>
+    <div class="content-small">content 2</div>
+    <div class="content-small">content 3</div>
+    <div class="footer">Footer</div>
+    
+</div>
+</body>
+</html>
